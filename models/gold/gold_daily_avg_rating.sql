@@ -4,7 +4,7 @@ SELECT
     products.product_name,
     avg(reviews.rating) avg_rating
 FROM {{ ref('bronze_reviews') }} reviews 
-LEFT JOINN {{ ref('silver_products') }} products 
+LEFT JOIN {{ ref('silver_products') }} products 
     ON reviews.product_id=products.id 
 
 GROUP BY 
