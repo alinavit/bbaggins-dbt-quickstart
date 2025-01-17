@@ -1,1 +1,1 @@
-SELECT * FROM DBT_PROJECT_CATALOG.LANDING.ORDERS
+SELECT * FROM {{ source('landing', 'orders') }}
